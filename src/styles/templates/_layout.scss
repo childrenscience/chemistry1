@@ -2,6 +2,9 @@ html, body, ul, h1,h2,h3,h4, p {
     margin: 0;
     padding: 0;
 }
+html {
+	font-size: 15px;	
+}
 html,
 body {
 	height: 100%;
@@ -26,20 +29,19 @@ a {
 	height: 100%;
 }
 
-.container {
+.main-container {
 	flex: 1 0 auto;
-	@include container;
+	@extend .container;
 	@extend .row;
-	@extend .col-xs-12;
-	@include breakpoint(64em) {
+	@include container;
+	@include breakpoint(64em) {/*1024px*/
 		flex-wrap: nowrap;
 	}
 }
 
 .main {
 	padding: 20px 10px;
-	//@extend .col-xs-12;
-	//@extend .col-md-9;
+	width: 100%;
 	@include breakpoint(64em) {
 		flex: 1 0 720px;
 	}
