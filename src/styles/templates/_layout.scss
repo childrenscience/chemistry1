@@ -1,0 +1,54 @@
+html, body, ul, h1,h2,h3,h4, p {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+
+body {
+	line-height: 1.42;
+	font-family: "PT Sans", sans-serif;
+}
+
+ul{
+	list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 100%;
+}
+
+.container {
+	flex: 1 0 auto;
+	@include container;
+	@extend .row;
+	@extend .col-xs-12;
+	@include breakpoint(64em) {
+		flex-wrap: nowrap;
+	}
+}
+
+.main {
+	padding: 20px 10px;
+	//@extend .col-xs-12;
+	//@extend .col-md-9;
+	@include breakpoint(64em) {
+		flex: 1 0 720px;
+	}
+}
+
+.main__heading {
+	margin: 15px 0;
+	color: $lightblue;	
+    font-family: open-sans, sans-serif;
+    @include font-size(24px);
+    font-weight: 600;
+}

@@ -1,0 +1,6 @@
+@include new ('link') {
+    color: $black;
+    &:hover {
+        color: $lightblue;
+    }
+}

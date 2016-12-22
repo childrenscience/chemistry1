@@ -1,0 +1,49 @@
+@include new ('footer') {
+  	flex: 0 0 auto;
+	@extend .col-xs-12;
+	padding: 15px 0;
+	background-color: $lightgrey;
+
+	@include has ('container') {
+		@include container;
+		@extend .row;
+	}
+
+	@include has ('contacts') {
+		@extend .col-xs-12;
+		@extend .col-sm-3;
+	}
+
+	@include has ('terms') {
+		@extend .col-xs-12;
+		@extend .col-sm-5;
+	}
+
+	@include has ('socials') {
+		@extend .col-xs-12;
+		@extend .col-sm-4;
+	}
+
+	@include has ('heading') {
+		margin: 0 0 5px;
+		color: $lightblue;	
+	    @include font-size(12px);		
+	    line-height: 24px;
+	    font-family: open-sans, sans-serif;
+	    font-weight: 600;
+	    text-align: left;
+	}
+	
+	@include has ('text') {		
+	    line-height: 13px;
+	    @include font-size(11px);
+	    font-family: open-sans, sans-serif;
+	}
+
+	@include has ('link') {
+		@extend .link;	
+	}	
+	@include has('link_middle') {
+		@extend %middle-inline-block;
+	}
+}

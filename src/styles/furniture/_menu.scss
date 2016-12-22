@@ -1,0 +1,27 @@
+@include new('menu') {
+	margin: 10px 0;
+	font-family: open-sans, sans-serif;
+	@extend .row;
+	@extend .col-md-3;
+	@extend .middle-xs;
+
+	@include has ('item') {
+		@extend %middle-inline-block;
+		margin: 0 10px;
+	}
+
+	@include has('link') {
+		display: inline-block;
+		min-width: 91px;
+		box-sizing: border-box;
+		padding: 3px 10px;
+		border-radius: 3px;
+		white-space: nowrap;
+		font-weight: 600;
+		@include font-size(14px);
+		color: $black;
+		&:hover {
+			background-color: $lightblue;
+		}
+	}
+}

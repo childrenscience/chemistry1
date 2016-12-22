@@ -1,0 +1,7 @@
+@include new('sidebar') {	
+	//@extend .col-xs-12;
+	//@extend .col-md-3;
+	@include breakpoint(64em) {
+		flex: 0 2 auto;
+	}
+}

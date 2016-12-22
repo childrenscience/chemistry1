@@ -1,0 +1,19 @@
+@include new ('header') {
+	flex: 0 0 auto;
+	@extend .col-xs-12;
+	padding: 20px 0;
+	text-align: center;	
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+    background-color: $lightgrey;
+
+	@include has('wrap') {
+		@extend .row;
+		@extend .center-xs;
+		@include container;
+	}	
+
+	@include has ('left') {
+		@extend .col-xs-12;
+		@extend .col-md-4;
+	}
+}
