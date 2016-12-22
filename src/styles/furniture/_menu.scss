@@ -2,6 +2,7 @@
 	margin: 10px 0;
 	font-family: open-sans, sans-serif;
 	@extend .row;
+	@extend .col-sm-6;
 	@extend .col-md-3;
 	@extend .middle-xs;
 

@@ -1,6 +1,7 @@
 $button-h: 28px;
 @include new('search') {
 	@extend .col-xs-12;
+	@extend .col-sm-6;
 	@extend .col-md-5;
 	@extend .end-md;
 	margin: 10px 0 0;
